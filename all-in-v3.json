@@ -63,7 +63,7 @@
             "name": "rhel72"
          },
          "spec": {
-            "dockerImageRepository": "registry.access.redhat.com/rhel7.2"
+            "dockerImageRepository": "registry.access.redhat.com/rhel7.2:latest"
          }
       },
       {
