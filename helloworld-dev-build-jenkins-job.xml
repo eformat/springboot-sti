@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project plugin="matrix-project@1.6">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.promoted__builds.JobPropertyImpl plugin="promoted-builds@2.25">
+      <activeProcessNames>
+        <string>Promote Test</string>
+      </activeProcessNames>
+    </hudson.plugins.promoted__builds.JobPropertyImpl>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <axes/>
+  <builders>
+    <com.openshift.jenkins.plugins.pipeline.OpenShiftBuilder plugin="openshift-pipeline@1.0.10-SNAPSHOT">
+      <apiURL>https://ose-master.hpteams.com:8443</apiURL>
+      <namespace>springboot-sti</namespace>
+      <authToken>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImplbmtpbnMtdG9rZW4tZ2NnbHoiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiamVua2lucyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjNiZmM1ZjU5LWQ5MzEtMTFlNS1hYzY1LTQyMDFjMGE4MDAwMiIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmplbmtpbnMifQ.dNLmhVezei5mLmxrWU78NOVpXb47JBkb142d3HkQlPcDfQOyYUKIPaqPnhmbzy3Sl35uOt4ZCyrDkctN94qZ6FXyvCIT_QBJn2xuLWx7tKIPX8InY8DMX6TTzjIMcOvPw9cwEVe6fsSFTxTIbjt5kWZvOhIz55XKR83R156Al40IZTUxFnLCmfA1uF1KA4xi6zxGmACXmh9MtuwSWCqAiWMCYxH9GR5dYUvme5jwFJNsckTceocLHa4zynjocAkYZbt-jrXMKs0NFULqqqyejEYwg15LNiwFaaVOR9Gj2SnsD2CnA2XU2GY-wCjXraxOJLkUn9sT-Y0TrJCDdXyg_w</authToken>
+      <verbose>true</verbose>
+      <bldCfg>helloworld-mvn</bldCfg>
+      <commitID></commitID>
+      <buildName></buildName>
+      <showBuildLogs>true</showBuildLogs>
+      <checkForTriggeredDeployments>true</checkForTriggeredDeployments>
+    </com.openshift.jenkins.plugins.pipeline.OpenShiftBuilder>
+    <com.openshift.jenkins.plugins.pipeline.OpenShiftDeploymentVerifier plugin="openshift-pipeline@1.0.10-SNAPSHOT">
+      <apiURL>https://ose-master.hpteams.com:8443</apiURL>
+      <namespace>springboot-sti</namespace>
+      <authToken>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImplbmtpbnMtdG9rZW4tZ2NnbHoiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiamVua2lucyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjNiZmM1ZjU5LWQ5MzEtMTFlNS1hYzY1LTQyMDFjMGE4MDAwMiIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmplbmtpbnMifQ.dNLmhVezei5mLmxrWU78NOVpXb47JBkb142d3HkQlPcDfQOyYUKIPaqPnhmbzy3Sl35uOt4ZCyrDkctN94qZ6FXyvCIT_QBJn2xuLWx7tKIPX8InY8DMX6TTzjIMcOvPw9cwEVe6fsSFTxTIbjt5kWZvOhIz55XKR83R156Al40IZTUxFnLCmfA1uF1KA4xi6zxGmACXmh9MtuwSWCqAiWMCYxH9GR5dYUvme5jwFJNsckTceocLHa4zynjocAkYZbt-jrXMKs0NFULqqqyejEYwg15LNiwFaaVOR9Gj2SnsD2CnA2XU2GY-wCjXraxOJLkUn9sT-Y0TrJCDdXyg_w</authToken>
+      <verbose>true</verbose>
+      <depCfg>helloworld-mvn</depCfg>
+      <replicaCount>1</replicaCount>
+      <verifyReplicaCount>true</verifyReplicaCount>
+    </com.openshift.jenkins.plugins.pipeline.OpenShiftDeploymentVerifier>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+    <runSequentially>false</runSequentially>
+  </executionStrategy>
+</matrix-project>

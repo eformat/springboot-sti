@@ -1,0 +1,31 @@
+{
+    "kind": "Endpoints",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "postgres-service",
+        "namespace": "springboot-sti",
+        "selfLink": "/api/v1/namespaces/springboot-sti/endpoints/postgres-service",
+        "uid": "90cdf9c1-ef39-11e5-92d3-525400b36d1d",
+        "resourceVersion": "1205905",
+        "creationTimestamp": "2016-03-21T07:50:22Z",
+        "labels": {
+            "app": "postgres-node"
+        }
+    },
+    "subsets": [
+        {
+            "addresses": [
+                {
+                    "ip": "192.168.136.1"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "postgres",
+                    "port": 5432,
+                    "protocol": "TCP"
+                }
+            ]
+        }
+    ]
+}
